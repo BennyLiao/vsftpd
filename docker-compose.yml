@@ -1,0 +1,17 @@
+version: "3"
+services:
+  vsftp:
+    build:
+      context: .
+    image: benny/vsftpd:compose_v1
+    container_name: vsftp
+    ports:
+      - "21:21"
+      - "28990-28999:28990-28999"
+    volumes:
+      - /data/ftp/data:/data/ftp
+      - /data/ftp/conf:/etc/vsftpd
+    #deploy:
+    #  restart_policy:
+    #    condition: on-failure
+
