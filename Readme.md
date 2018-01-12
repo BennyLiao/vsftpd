@@ -1,8 +1,8 @@
 ### git_repo: https://github.com/BennyLiao/vsftpd
 
 方法1:
-    docker pull benny1105/vsftpd:v1
-    docker run -itd --name vsftp -v /data/ftp/data:/data/ftp -v /data/ftp/conf:/etc/vsftpd -p 21:21 -p 28990-28999:28990-28999 benny1105/vsftpd:v1
+    docker pull benny1105/vsftpd
+    docker run -itd --name vsftp -v /data/ftp/data:/data/ftp -v /data/ftp/conf:/etc/vsftpd -p 21:21 -p 28990-28999:28990-28999 benny1105/vsftpd
     # docker stop vsftp
     # docker start vsftp
 
